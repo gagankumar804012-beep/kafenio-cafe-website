@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafenio Cafe & Bistro | 24x7 All-Day Diner & Specialty Coffee</title>
+    <meta name="description" content="Experience Kafenio Cafe & Bistro - Punjab's premier 24x7 all-day diner, specialty espresso bar, wood-fired artisanal pizzas, and gourmet bistro in Mohali and Ludhiana. Book a table or order online.">
+    <meta name="keywords" content="Kafenio Cafe, Kafenio Bistro, Mohali cafe, Ludhiana cafe, 24x7 cafe Mohali, coffee shop Sector 82 Mohali, wood fired pizza, specialty coffee">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- PWA Mobile App Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#081D17">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Kafenio">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span><i class="fa-solid fa-clock"></i> <strong>Open 24/7</strong> in Mohali Sector 82 & Ludhiana Ayali Road</span>
+            <div class="announcement-links">
+                <a href="#locations"><i class="fa-solid fa-location-dot"></i> Select Branch</a>
+                <span class="divider">|</span>
+                <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-badge">24/7</span>
+                <div class="logo-text">
+                    <span class="brand-name">KAFENIO</span>
+                    <span class="brand-tag">CAFE & BISTRO</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#ambiance" class="nav-link">Ambiance</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#locations" class="nav-link">Locations</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-outline reserve-btn" id="openReserveModalBtn">
+                    <i class="fa-solid fa-calendar-check"></i> Book Table
+                </button>
+                <button class="cart-trigger" id="cartTriggerBtn" aria-label="View Order Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-star"></i> 4.8 Rating • 24x7 All-Day Dining
+                </div>
+                <h1 class="hero-title">Crafting Coffee & Culinary Memories <span>Day & Night</span></h1>
+                <p class="hero-description">
+                    Step into Kafenio — Punjab's favorite ambient bistro. From artisanal bean-to-cup espressos and fluffy souffle pancakes to truffle wood-fired pizzas and craft mocktails, we serve warm moments round the clock.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-utensils"></i> Explore Menu
+                    </a>
+                    <button class="btn btn-glass btn-lg" id="heroBookBtn">
+                        <i class="fa-solid fa-chair"></i> Reserve a Table
+                    </button>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <div>
+                            <h4>Specialty Coffee</h4>
+                            <p>Single-origin arabica beans</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-fire"></i>
+                        <div>
+                            <h4>Wood-Fired Pizza</h4>
+                            <p>Hand-stretched Neapolitan</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-moon"></i>
+                        <div>
+                            <h4>24x7 Diner</h4>
+                            <p>Late night cravings solved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story / Highlights Section -->
+    <section class="section about-section" id="about">
+        <div class="container grid grid-2">
+            <div class="about-images">
+                <div class="image-wrapper main-img">
+                    <img src="assets/hero_ambiance.jpg" alt="Kafenio Cafe Luxury Interior" loading="lazy">
+                </div>
+                <div class="image-wrapper sub-img">
+                    <img src="assets/specialty_coffee.jpg" alt="Specialty Espresso at Kafenio" loading="lazy">
+                </div>
+                <div class="floating-experience-badge">
+                    <span class="number">24/7</span>
+                    <span class="label">Vibrant Diner & Cafe</span>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="section-subtitle"><i class="fa-solid fa-sparkles"></i> Welcome to Kafenio</span>
+                <h2 class="section-title">Where European Bistro Elegance Meets Warm Hospitality</h2>
+                <p class="lead-text">
+                    Founded with a passion for exceptional food and handcrafted coffee, Kafenio Cafe & Bistro has grown into a landmark destination in Mohali & Ludhiana.
+                </p>
+                <p class="body-text">
+                    Whether you are seeking an early morning sunrise espresso, a relaxing afternoon work session with high-speed WiFi, a romantic candlelit dinner, or a 2 AM pizza craving with friends — Kafenio is designed to be your cozy second home.
+                </p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="icon-box"><i class="fa-solid fa-seedling"></i></div>
+                        <div>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Locally sourced organic produce & imported Italian cheeses</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="icon-box"><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <h3>Vibrant Atmosphere</h3>
+                            <p>Lush green ambiance, golden ambient lighting & live acoustic sets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle"><i class="fa-solid fa-book-open"></i> Handcrafted Offerings</span>
+                <h2 class="section-title">Our Signature Culinary Menu</h2>
+                <p class="section-desc">Filtered by category or dietary preference. Order online for dine-in pickup or table delivery!</p>
+            </div>
+
+            <!-- Menu Search & Filter Controls -->
+            <div class="menu-controls">
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="menuSearchInput" placeholder="Search pizza, latte, souffle pancakes, pasta..." aria-label="Search menu">
+                    <button id="clearSearchBtn" class="clear-search" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <div class="category-tabs" id="categoryTabs">
+                    <button class="tab-btn active" data-category="all">
+                        <i class="fa-solid fa-border-all"></i> All Items
+                    </button>
+                    <button class="tab-btn" data-category="coffee">
+                        <i class="fa-solid fa-mug-hot"></i> Coffee & Brews
+                    </button>
+                    <button class="tab-btn" data-category="pizza">
+                        <i class="fa-solid fa-pizza-slice"></i> Wood-Fired Pizza
+                    </button>
+                    <button class="tab-btn" data-category="pasta">
+                        <i class="fa-solid fa-bowl-food"></i> Pasta & Mains
+                    </button>
+                    <button class="tab-btn" data-category="desserts">
+                        <i class="fa-solid fa-ice-cream"></i> Desserts
+                    </button>
+                    <button class="tab-btn" data-category="drinks">
+                        <i class="fa-solid fa-martini-glass-citrus"></i> Mocktails & Shakes
+                    </button>
+                </div>
+
+                <div class="dietary-filter">
+                    <span class="filter-label">Filter:</span>
+                    <button class="diet-btn active" data-diet="all">All</button>
+                    <button class="diet-btn" data-diet="veg"><span class="dot veg-dot"></span> Veg Only</button>
+                    <button class="diet-btn" data-diet="non-veg"><span class="dot nonveg-dot"></span> Non-Veg</button>
+                </div>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Dynamically populated by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Showcase / Ambiance Gallery -->
+    <section class="section gallery-section" id="ambiance">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle"><i class="fa-solid fa-camera"></i> Visual Experience</span>
+                <h2 class="section-title">The Kafenio Ambiance</h2>
+                <p class="section-desc">Emerald greens, warm gold accents, and cozy dining corners built for togetherness.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card large">
+                    <img src="assets/hero_ambiance.jpg" alt="Kafenio Main Lounge" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Main Emerald Lounge & Bar</h3>
+                        <p>Emerald walls & ambient gold lighting</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/specialty_coffee.jpg" alt="Barista Specialty Coffee" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Espresso & Cold Brew Bar</h3>
+                        <p>Artisanal arabica bean coffee</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/artisanal_pizza.jpg" alt="Wood Fired Oven Pizza" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Wood-Fired Pizza Oven</h3>
+                        <p>Authentic 400°C Neapolitan bake</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/gourmet_burger.jpg" alt="Gourmet Smash Burger" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Gourmet Kitchen</h3>
+                        <p>Double smash burgers & sides</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/gourmet_desserts.jpg" alt="Souffle Pancakes" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Dessert Station</h3>
+                        <p>Freshly flipped soufflé pancakes</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="assets/drinks_mocktails.jpg" alt="Craft Drinks Bar" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Mixology Bar</h3>
+                        <p>Handcrafted botanical mocktails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events & Specials Section -->
+    <section class="section events-section" id="events">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle"><i class="fa-solid fa-calendar-days"></i> What's Happening</span>
+                <h2 class="section-title">Events & Live Experiences</h2>
+                <p class="section-desc">Join us for live acoustic sessions, weekend coffee masterclasses, and fluid art workshops.</p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">FRI</span>
+                        <span class="time">8:00 PM</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-tag">Music</span>
+                        <h3>Unplugged Acoustic Night</h3>
+                        <p>Soothing live acoustic guitar & vocal performances by local indie artists under ambient lights.</p>
+                        <button class="btn btn-sm btn-outline reserve-event-btn" data-event="Unplugged Acoustic Night">Reserve Slot</button>
+                    </div>
+                </div>
+
+                <div class="event-card highlight">
+                    <div class="event-date">
+                        <span class="day">SAT</span>
+                        <span class="time">4:00 PM</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-tag">Workshop</span>
+                        <h3>Coffee Cupping & Latte Art Masterclass</h3>
+                        <p>Learn the secrets of espresso bean origin tasting, milk texturing, and pouring latte art with head baristas.</p>
+                        <button class="btn btn-sm btn-primary reserve-event-btn" data-event="Coffee Masterclass">Reserve Slot</button>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">SUN</span>
+                        <span class="time">11:00 AM</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-tag">Community</span>
+                        <h3>Sip & Paint Canvas Workshop</h3>
+                        <p>Unwind your creative side with acrylic paints, guidance from an artist, and a complimentary mocktail.</p>
+                        <button class="btn btn-sm btn-outline reserve-event-btn" data-event="Sip & Paint Workshop">Reserve Slot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations & Hours Section -->
+    <section class="section locations-section" id="locations">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle"><i class="fa-solid fa-map-location-dot"></i> Visit Us</span>
+                <h2 class="section-title">Our Punjab Branches</h2>
+                <p class="section-desc">Select a location to view operating hours, contact info, and directions.</p>
+            </div>
+
+            <!-- Branch Switcher Tabs -->
+            <div class="branch-selector text-center">
+                <button class="branch-btn active" id="branchMohaliBtn">
+                    <i class="fa-solid fa-building-user"></i> Mohali (Sector 82)
+                </button>
+                <button class="branch-btn" id="branchLudhianaBtn">
+                    <i class="fa-solid fa-store"></i> Ludhiana (Ayali Road)
+                </button>
+            </div>
+
+            <div class="branch-card-container">
+                <!-- Mohali Branch Card -->
+                <div class="branch-detail-card active" id="mohaliCard">
+                    <div class="branch-info">
+                        <span class="status-badge open-badge"><i class="fa-solid fa-circle-check"></i> Open 24/7 Now</span>
+                        <h3>Kafenio Cafe & Bistro — Mohali</h3>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-location-dot"></i> Plot 452, Sector 82, JLPL Industrial Area, Mohali, Punjab 140308</li>
+                            <li><i class="fa-solid fa-clock"></i> Monday – Sunday: <strong>24 Hours (All-Day & Late Night Diner)</strong></li>
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a> / +91 98765 43211</li>
+                            <li><i class="fa-solid fa-envelope"></i> mohali@kafeniocafe.com</li>
+                            <li><i class="fa-solid fa-square-parking"></i> Free On-Site Parking & Valet Available</li>
+                        </ul>
+                        <div class="branch-actions">
+                            <a href="https://maps.google.com/?q=Kafenio+Cafe+Bistro+Mohali+Sector+82" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                            </a>
+                            <button class="btn btn-outline btn-sm reserve-branch-btn" data-branch="Mohali (Sector 82)">
+                                <i class="fa-solid fa-calendar-plus"></i> Book Table Here
+                            </button>
+                        </div>
+                    </div>
+                    <div class="branch-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13725.263884483783!2d76.7118!3d30.6657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb22a0149021%3A0x6b10705a611c6d1f!2sSector%2082%2C%20JLPL%20Industrial%20Area%2C%20Mohali%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kafenio Mohali Map"></iframe>
+                    </div>
+                </div>
+
+                <!-- Ludhiana Branch Card -->
+                <div class="branch-detail-card" id="ludhianaCard" style="display:none;">
+                    <div class="branch-info">
+                        <span class="status-badge open-badge"><i class="fa-solid fa-circle-check"></i> Open 24/7 Now</span>
+                        <h3>Kafenio Cafe & Bistro — Ludhiana</h3>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-location-dot"></i> Ayali Road, South City, Ayali Khurd, Ludhiana, Punjab 141008</li>
+                            <li><i class="fa-solid fa-clock"></i> Monday – Sunday: <strong>24 Hours (All-Day & Late Night Diner)</strong></li>
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+919876512345">+91 98765 12345</a> / +91 98765 12346</li>
+                            <li><i class="fa-solid fa-envelope"></i> ludhiana@kafeniocafe.com</li>
+                            <li><i class="fa-solid fa-wifi"></i> Free High-Speed WiFi & Charging Hubs</li>
+                        </ul>
+                        <div class="branch-actions">
+                            <a href="https://maps.google.com/?q=Kafenio+Cafe+Bistro+Ludhiana+Ayali+Road" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                            </a>
+                            <button class="btn btn-outline btn-sm reserve-branch-btn" data-branch="Ludhiana (Ayali Road)">
+                                <i class="fa-solid fa-calendar-plus"></i> Book Table Here
+                            </button>
+                        </div>
+                    </div>
+                    <div class="branch-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13689.876543210!2d75.7891!3d30.8901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a830000000000%3A0x0!2sAyali+Khurd%2C+Ludhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kafenio Ludhiana Map"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle"><i class="fa-solid fa-comments"></i> Guest Testimonials</span>
+                <h2 class="section-title">Loved by Coffee & Food Enthusiasts</h2>
+                <div class="rating-summary">
+                    <span class="rating-score">4.8</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="review-count">(1,450+ Verified Reviews on Swiggy, Google & EazyDiner)</span>
+                </div>
+            </div>
+
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Kafenio Sector 82 Mohali is our go-to late night hangout. The Truffle Mushroom Wood-Fired Pizza and Spanish Latte are absolute top tier. The emerald interiors and gold lighting give it an upscale cozy vibe!"</p>
+                    <div class="reviewer">
+                        <div class="avatar">GS</div>
+                        <div>
+                            <h4>Gurpreet Singh</h4>
+                            <span>Regular Guest • Mohali</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Best souffle pancakes in the entire Tricity! Super light, golden, and paired with their artisanal nitro cold brew. The staff is warm and courteous even at 3 AM."</p>
+                    <div class="reviewer">
+                        <div class="avatar">AS</div>
+                        <div>
+                            <h4>Ananya Sharma</h4>
+                            <span>Food Critic • Ludhiana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Hosted my birthday party at Kafenio's outdoor terrace. The pasta, mocktails, and live acoustic music created an unforgettable night. 10/10 recommend booking in advance!"</p>
+                    <div class="reviewer">
+                        <div class="avatar">VK</div>
+                        <div>
+                            <h4>Vikram Kulkarni</h4>
+                            <span>Event Host • Mohali</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo">
+                    <span class="logo-badge">24/7</span>
+                    <div class="logo-text">
+                        <span class="brand-name">KAFENIO</span>
+                        <span class="brand-tag">CAFE & BISTRO</span>
+                    </div>
+                </a>
+                <p class="footer-desc">
+                    Punjab's premier 24x7 all-day diner, artisanal coffee house, and European bistro. Serving comfort food, specialty brews, and memories 24 hours a day.
+                </p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#menu">Culinary Menu</a></li>
+                    <li><a href="#ambiance">Ambiance Gallery</a></li>
+                    <li><a href="#events">Events & Masterclasses</a></li>
+                    <li><a href="#locations">Branch Locations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Popular Specialties</h3>
+                <ul class="footer-links">
+                    <li><a href="#menu">Spanish Iced Latte</a></li>
+                    <li><a href="#menu">Truffle Mushroom Pizza</a></li>
+                    <li><a href="#menu">Classic Soufflé Pancakes</a></li>
+                    <li><a href="#menu">Truffle Alfredo Fettuccine</a></li>
+                    <li><a href="#menu">Passionfruit Mojito</a></li>
+                    <li><a href="#menu">Biscoff Caramel Shake</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter & Perks</h3>
+                <p>Subscribe for secret menu updates, event invitations & 15% off your next table reservation.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required aria-label="Email Address">
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>© 2026 Kafenio Cafe & Bistro. All Rights Reserved. Designed with elegance for Mohali & Ludhiana.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                    <span>•</span>
+                    <a href="#">FSSAI Certified</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Table Reservation Modal -->
+    <div class="modal-backdrop" id="reserveModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeReserveModalBtn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="badge-gold"><i class="fa-solid fa-chair"></i> Instant Confirmation</span>
+                <h2>Reserve a Table at Kafenio</h2>
+                <p>Book your spot for dining, meetings, or special celebrations.</p>
+            </div>
+
+            <form id="reservationForm" class="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resBranch"><i class="fa-solid fa-store"></i> Select Branch</label>
+                        <select id="resBranch" required>
+                            <option value="Mohali (Sector 82)">Mohali — Sector 82 (JLPL Area)</option>
+                            <option value="Ludhiana (Ayali Road)">Ludhiana — Ayali Road (South City)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="resGuests"><i class="fa-solid fa-user-group"></i> Number of Guests</label>
+                        <select id="resGuests" required>
+                            <option value="2 Guests">2 Guests (Couple / Cozy)</option>
+                            <option value="4 Guests" selected>4 Guests (Standard)</option>
+                            <option value="6 Guests">6 Guests (Group)</option>
+                            <option value="8+ Guests">8+ Guests (Celebration)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resDate"><i class="fa-solid fa-calendar"></i> Reservation Date</label>
+                        <input type="date" id="resDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resTime"><i class="fa-solid fa-clock"></i> Preferred Time</label>
+                        <select id="resTime" required>
+                            <option value="08:00 AM">08:00 AM (Breakfast)</option>
+                            <option value="01:00 PM">01:00 PM (Lunch)</option>
+                            <option value="05:00 PM">05:00 PM (Evening Coffee)</option>
+                            <option value="08:30 PM">08:30 PM (Dinner)</option>
+                            <option value="11:30 PM">11:30 PM (Late Night Diner)</option>
+                            <option value="02:00 AM">02:00 AM (Midnight Craving)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resSeating"><i class="fa-solid fa-couch"></i> Seating Preference</label>
+                        <select id="resSeating">
+                            <option value="Indoor Main Lounge">Indoor Emerald Lounge</option>
+                            <option value="Outdoor Terrace">Outdoor Garden Terrace</option>
+                            <option value="Bar Counter">Bar Counter High Seating</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="resName"><i class="fa-solid fa-user"></i> Full Name</label>
+                        <input type="text" id="resName" placeholder="e.g. Jaspreet Singh" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resPhone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="resPhone" placeholder="e.g. +91 98765 43210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resNote"><i class="fa-solid fa-comment-dots"></i> Special Requests (Optional)</label>
+                        <input type="text" id="resNote" placeholder="Birthday candles, quiet table...">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">
+                    <i class="fa-solid fa-check-circle"></i> Confirm Table Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart / Order Drawer -->
+    <div class="cart-drawer-backdrop" id="cartDrawerBackdrop">
+        <div class="cart-drawer" id="cartDrawer">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-bag-shopping"></i> Your Order Cart</h3>
+                <button class="cart-close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="cart-body" id="cartBody">
+                <!-- Dynamically updated -->
+                <div class="empty-cart-state" id="emptyCartState">
+                    <i class="fa-solid fa-utensils empty-icon"></i>
+                    <h4>Your cart is empty</h4>
+                    <p>Explore our handcrafted menu and add your favorite coffee, pizzas, or desserts!</p>
+                </div>
+            </div>
+
+            <div class="cart-footer" id="cartFooter" style="display:none;">
+                <div class="order-type-selector">
+                    <label class="radio-label">
+                        <input type="radio" name="orderType" value="Dine-in Table Service" checked>
+                        <span><i class="fa-solid fa-chair"></i> Dine-in</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="orderType" value="Takeaway Pickup">
+                        <span><i class="fa-solid fa-box"></i> Takeaway</span>
+                    </label>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal">₹0</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>GST & Service Charge (5%)</span>
+                        <span id="cartTax">₹0</span>
+                    </div>
+                    <div class="summary-line total-line">
+                        <span>Total Payable</span>
+                        <span id="cartTotal">₹0</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block btn-lg" id="checkoutBtn">
+                    <i class="fa-solid fa-credit-card"></i> Place Order Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Lightbox Modal -->
+    <div class="modal-backdrop" id="photoLightboxModal">
+        <div class="lightbox-content">
+            <button class="modal-close" id="closeLightboxBtn" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+            <div class="lightbox-body">
+                <div class="lightbox-img-wrapper">
+                    <img id="lightboxImg" src="" alt="Menu Dish Photo">
+                    <span class="badge-tag" id="lightboxDietBadge"></span>
+                </div>
+                <div class="lightbox-info">
+                    <span class="badge-gold" id="lightboxTag"><i class="fa-solid fa-utensils"></i> Chef's Selection</span>
+                    <h2 id="lightboxTitle">Dish Title</h2>
+                    <p class="lightbox-price" id="lightboxPrice">₹0</p>
+                    <p class="lightbox-desc" id="lightboxDesc">Dish description goes here...</p>
+                    
+                    <div class="dish-meta-grid">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <span>Prep Time</span>
+                                <strong id="lightboxPrepTime">12-15 Mins</strong>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                            <div>
+                                <span>Serving</span>
+                                <strong>Fresh 24/7</strong>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <span>Quality</span>
+                                <strong>100% Organic</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block btn-lg" id="lightboxAddBtn">
+                        <i class="fa-solid fa-cart-plus"></i> Add Dish to Order Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile App Bottom Navigation Bar (Smartphones) -->
+    <nav class="mobile-bottom-nav">
+        <a href="#home" class="bottom-nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#menu" class="bottom-nav-item">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Menu</span>
+        </a>
+        <button class="bottom-nav-item nav-reserve-btn" id="mobileBottomReserveBtn">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book</span>
+        </button>
+        <button class="bottom-nav-item nav-cart-btn" id="mobileBottomCartBtn">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Cart</span>
+            <span class="mobile-cart-badge" id="mobileCartCount">0</span>
+        </button>
+        <a href="#locations" class="bottom-nav-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Branches</span>
+        </a>
+    </nav>
+
+    <!-- Success Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
