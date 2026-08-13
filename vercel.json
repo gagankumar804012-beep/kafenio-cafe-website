@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "name": "kafenio-cafe-website",
-  "cleanUrls": true,
-  "headers": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=86400"
-        }
-      ]
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
