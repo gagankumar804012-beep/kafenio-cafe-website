@@ -1,30 +1,30 @@
 /* ==========================================================================
-   KAFENIO CAFE & BISTRO - CLEAN MODERN DESIGN SYSTEM
+   KAFENIO CAFE & BISTRO - ELEGANT WARM ESPRESSO & COFFEE DESIGN SYSTEM
    ========================================================================== */
 
 :root {
-    --bg-primary: #081D17;
-    --bg-secondary: #0D2A21;
-    --bg-card: #11362B;
-    --bg-glass: rgba(13, 42, 33, 0.85);
+    --bg-primary: #120D0A;
+    --bg-secondary: #1C1510;
+    --bg-card: #261D17;
+    --bg-glass: rgba(28, 21, 16, 0.88);
     
     --accent-gold: #D4AF37;
     --accent-gold-hover: #F3C649;
     --accent-amber: #E67E22;
-    --accent-emerald: #10B981;
+    --accent-copper: #D35400;
     
-    --text-primary: #FDFBF7;
-    --text-secondary: #C2D1C9;
-    --text-muted: #829A8F;
-    --text-gold: #F1D479;
+    --text-primary: #FAF6F0;
+    --text-secondary: #E3D7CD;
+    --text-muted: #9E8E83;
+    --text-gold: #F3C649;
     
-    --border-color: rgba(212, 175, 55, 0.2);
-    --border-color-hover: rgba(212, 175, 55, 0.5);
+    --border-color: rgba(212, 175, 55, 0.22);
+    --border-color-hover: rgba(212, 175, 55, 0.55);
     
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
     
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.5);
     --shadow-glow: 0 0 25px rgba(212, 175, 55, 0.25);
     
     --radius-sm: 8px;
@@ -122,7 +122,7 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent-gold) 0%, #B88E28 100%);
-    color: #081D17;
+    color: #120D0A;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
@@ -164,7 +164,7 @@ body {
 
 /* Announcement Bar */
 .announcement-bar {
-    background: linear-gradient(90deg, #051510 0%, #11362B 50%, #051510 100%);
+    background: linear-gradient(90deg, #100B08 0%, #261D17 50%, #100B08 100%);
     border-bottom: 1px solid var(--border-color);
     padding: 8px 0;
     font-size: 0.85rem;
@@ -383,7 +383,7 @@ body {
     min-height: 85vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(180deg, rgba(8, 29, 23, 0.75) 0%, rgba(8, 29, 23, 0.92) 100%), url('assets/cafe_hero_bg.jpg') center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(18, 13, 10, 0.75) 0%, rgba(18, 13, 10, 0.94) 100%), url('assets/cafe_hero_bg.jpg') center/cover no-repeat;
     padding: 90px 0 60px 0;
 }
 
@@ -757,8 +757,8 @@ body {
     display: inline-block;
 }
 
-.veg-dot { background: #10B981; }
-.nonveg-dot { background: #EF4444; }
+.veg-dot { background: #27AE60; }
+.nonveg-dot { background: #E74C3C; }
 
 /* Menu Grid */
 .menu-grid {
@@ -806,7 +806,7 @@ body {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: rgba(8, 29, 23, 0.85);
+    background: rgba(28, 21, 16, 0.88);
     border: 1px solid var(--border-color);
     color: var(--accent-gold);
     width: 32px;
@@ -837,8 +837,8 @@ body {
     text-transform: uppercase;
 }
 
-.badge-veg { background: rgba(16, 185, 129, 0.9); color: white; }
-.badge-nonveg { background: rgba(239, 68, 68, 0.9); color: white; }
+.badge-veg { background: rgba(39, 174, 96, 0.9); color: white; }
+.badge-nonveg { background: rgba(231, 76, 60, 0.9); color: white; }
 
 .badge-popular {
     position: absolute;
@@ -959,7 +959,7 @@ body {
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(8, 29, 23, 0.9) 100%);
+    background: linear-gradient(180deg, transparent 40%, rgba(18, 13, 10, 0.92) 100%);
     padding: 18px;
     display: flex;
     flex-direction: column;
@@ -1004,7 +1004,7 @@ body {
 .event-card.highlight {
     border-color: var(--accent-gold);
     box-shadow: var(--shadow-glow);
-    background: linear-gradient(135deg, #11362B 0%, #174739 100%);
+    background: linear-gradient(135deg, #261D17 0%, #382A20 100%);
 }
 
 .event-date {
@@ -1110,9 +1110,9 @@ body {
 }
 
 .open-badge {
-    background: rgba(16, 185, 129, 0.2);
-    color: #10B981;
-    border: 1px solid #10B981;
+    background: rgba(212, 175, 55, 0.2);
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
 }
 
 .branch-info h3 {
@@ -1246,7 +1246,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #051510;
+    background: #0E0907;
     border-top: 1px solid var(--border-color);
     padding: 70px 0 0 0;
 }
@@ -1344,7 +1344,7 @@ body {
 }
 
 .footer-bottom {
-    background: #030E0B;
+    background: #080504;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 20px 0;
     font-size: 0.82rem;
@@ -1369,7 +1369,7 @@ body {
 .modal-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.82);
     backdrop-filter: blur(8px);
     z-index: 2000;
     display: flex;
@@ -1606,7 +1606,7 @@ body {
 .cart-drawer-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(6px);
     z-index: 2100;
     opacity: 0;
@@ -1838,6 +1838,17 @@ body {
     font-size: 1.1rem;
 }
 
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Mobile App Bottom Tab Bar (Smartphones Only) */
 .mobile-bottom-nav {
     display: none;
@@ -1845,7 +1856,7 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding-bottom: 64px; /* Space for bottom tab bar */
+        padding-bottom: 64px;
     }
 
     .mobile-bottom-nav {
